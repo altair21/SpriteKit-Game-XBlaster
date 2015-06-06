@@ -13,6 +13,7 @@
 		5051C2AC1B232A7800CD5025 /* bgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5051C2A91B232A7800CD5025 /* bgMusic.mp3 */; };
 		5051C2AD1B232A7800CD5025 /* explode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5051C2AA1B232A7800CD5025 /* explode.wav */; };
 		5051C2AE1B232A7800CD5025 /* laser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5051C2AB1B232A7800CD5025 /* laser.wav */; };
+		5051C2B01B232D1600CD5025 /* ventingPlasma.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5051C2AF1B232D1600CD5025 /* ventingPlasma.sks */; };
 		5055FEA41B20745C00D677C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FEA31B20745C00D677C3 /* AppDelegate.swift */; };
 		5055FEA81B20745C00D677C3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FEA71B20745C00D677C3 /* GameScene.swift */; };
 		5055FEAA1B20745C00D677C3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5055FEA91B20745C00D677C3 /* GameViewController.swift */; };
@@ -59,6 +60,7 @@
 		5051C2A91B232A7800CD5025 /* bgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgMusic.mp3; sourceTree = "<group>"; };
 		5051C2AA1B232A7800CD5025 /* explode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explode.wav; sourceTree = "<group>"; };
 		5051C2AB1B232A7800CD5025 /* laser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = laser.wav; sourceTree = "<group>"; };
+		5051C2AF1B232D1600CD5025 /* ventingPlasma.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ventingPlasma.sks; sourceTree = "<group>"; };
 		5055FE9E1B20745C00D677C3 /* XBlaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XBlaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5055FEA21B20745C00D677C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5055FEA31B20745C00D677C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				5051C2A21B2312F200CD5025 /* engine.sks */,
 				5051C2A31B2312F200CD5025 /* spark.png */,
 				5051C2A61B231A9E00CD5025 /* enemyDeath.sks */,
+				5051C2AF1B232D1600CD5025 /* ventingPlasma.sks */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				5055FEB21B20745C00D677C3 /* LaunchScreen.xib in Resources */,
 				5051C2A51B2312F200CD5025 /* spark.png in Resources */,
 				5051C2A41B2312F200CD5025 /* engine.sks in Resources */,
+				5051C2B01B232D1600CD5025 /* ventingPlasma.sks in Resources */,
 				5051C2AC1B232A7800CD5025 /* bgMusic.mp3 in Resources */,
 				5051C2A71B231A9E00CD5025 /* enemyDeath.sks in Resources */,
 				5055FEAF1B20745C00D677C3 /* Images.xcassets in Resources */,

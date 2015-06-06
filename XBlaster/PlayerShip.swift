@@ -10,6 +10,8 @@ import SpriteKit
 
 class PlayerShip: Entity {
     
+    let ventingPlasma:SKEmitterNode = SKEmitterNode(fileNamed: "ventingPlasma.sks")
+    
     init(entityPosition: CGPoint) {
         let entityTexture = PlayerShip.generateTexture()!
         
@@ -20,6 +22,9 @@ class PlayerShip: Entity {
         // Details on how the Sprite Kit physics engine works can be found in the book in
         // Chapter 9, "Beginner Physics"
         configureCollisionBody()
+        ventingPlasma.hidden = true
+        self.addChild(ventingPlasma)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -93,6 +98,8 @@ class PlayerShip: Entity {
         if health < 0 {
             health = 0
         }
+        
+        ventingPlasma.hidden = health > 30
     }
     
     func createEngine() {
