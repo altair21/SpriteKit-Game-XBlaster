@@ -17,6 +17,7 @@ class Enemy : Entity {
     let healthMeterText: NSString = "________"
     let scoreLabel = SKLabelNode(fontNamed: "Edit Undo Line BRK")
     let damageTakenPerHit = 10.0
+    let deathEmitter:SKEmitterNode = SKEmitterNode(fileNamed: "enemyDeath.sks")
     
     var aiSteering: AISteering!
     var playableRect: CGRect!
@@ -179,6 +180,12 @@ class Enemy : Entity {
             scoreLabel.removeAllActions()
             scoreLabel.runAction(SharedAssets.scoreLabelAction)
             
+            deathEmitter.position = position
+            if deathEmitter.parent == nil {
+                mainScene.particleLayerNode.addChild(deathEmitter)
+            }
+            deathEmitter.resetSimulation()
+            mainScene.playExplodeSound()
         }
     }
 }
