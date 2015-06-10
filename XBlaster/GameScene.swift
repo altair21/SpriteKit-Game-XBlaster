@@ -240,24 +240,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         tapScreenLabel.removeFromParent()
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if gameState == .GameOver {
             restartGame()
         }
     }
     
-    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = (touches as NSSet).anyObject() as! UITouch
         let currentPoint = touch.locationInNode(self)
         previousTouchLocation = touch.previousLocationInNode(self)
         deltaPoint = currentPoint - previousTouchLocation
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         deltaPoint = CGPointZero
     }
     
-    override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
         deltaPoint = CGPointZero
     }
     
@@ -333,7 +333,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1.0)
             
         default:
-            println("UNKNWON GAME STATE")
+            print("UNKNWON GAME STATE", appendNewline: false)
         }
         
     }
@@ -358,13 +358,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func starfieldEmitterNode(#speed: CGFloat, lifetime: CGFloat, scale: CGFloat, birthRate: CGFloat, color: SKColor) -> SKEmitterNode {
+    func starfieldEmitterNode(speed speed: CGFloat, lifetime: CGFloat, scale: CGFloat, birthRate: CGFloat, color: SKColor) -> SKEmitterNode {
         let star = SKLabelNode(fontNamed: "Helvetica")
         star.fontSize = 80.0
         star.text = "✦"
         let textureView = SKView()
         let texture = textureView.textureFromNode(star)
-        texture.filteringMode = .Nearest
+        texture!.filteringMode = .Nearest
         
         let emitterNode = SKEmitterNode()
         emitterNode.particleTexture = texture

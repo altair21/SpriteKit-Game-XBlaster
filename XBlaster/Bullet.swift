@@ -39,7 +39,7 @@ class Bullet: Entity {
             
             let textureView = SKView()
             SharedTexture.texture =
-                textureView.textureFromNode(bullet)
+                textureView.textureFromNode(bullet)!
             SharedTexture.texture.filteringMode = .Nearest
         })
         

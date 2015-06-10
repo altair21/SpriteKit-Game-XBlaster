@@ -17,7 +17,7 @@ class Enemy : Entity {
     let healthMeterText: NSString = "________"
     let scoreLabel = SKLabelNode(fontNamed: "Edit Undo Line BRK")
     let damageTakenPerHit = 10.0
-    let deathEmitter:SKEmitterNode = SKEmitterNode(fileNamed: "enemyDeath.sks")
+    let deathEmitter:SKEmitterNode = SKEmitterNode(fileNamed: "enemyDeath.sks")!
     
     var aiSteering: AISteering!
     var playableRect: CGRect!
@@ -94,7 +94,7 @@ class Enemy : Entity {
         addChild(healthMeterLabel)
         
         scoreLabel.fontSize = 15
-        scoreLabel.color = SKColorWithRGBA(128, 255, 255, 255)
+        scoreLabel.color = SKColorWithRGBA(128, g: 255, b: 255, a: 255)
         scoreLabel.text = String(score)
         
     }

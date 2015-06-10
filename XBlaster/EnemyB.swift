@@ -25,7 +25,7 @@ class EnemyB: Enemy, SKPhysicsContactDelegate {
             mainShip.text = "⎛-⚉-⎞"
             
             let textureView = SKView()
-            SharedTexture.texture = textureView.textureFromNode(mainShip)
+            SharedTexture.texture = textureView.textureFromNode(mainShip)!
             SharedTexture.texture.filteringMode = .Nearest
         })
         

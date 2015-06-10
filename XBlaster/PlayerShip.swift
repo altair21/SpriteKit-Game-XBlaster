@@ -10,7 +10,7 @@ import SpriteKit
 
 class PlayerShip: Entity {
     
-    let ventingPlasma:SKEmitterNode = SKEmitterNode(fileNamed: "ventingPlasma.sks")
+    let ventingPlasma:SKEmitterNode = SKEmitterNode(fileNamed: "ventingPlasma.sks")!
     
     init(entityPosition: CGPoint) {
         let entityTexture = PlayerShip.generateTexture()!
@@ -59,7 +59,7 @@ class PlayerShip: Entity {
             // 5
             let textureView = SKView()
             SharedTexture.texture =
-                textureView.textureFromNode(mainShip)
+                textureView.textureFromNode(mainShip)!
             SharedTexture.texture.filteringMode = .Nearest
         })
         
@@ -104,12 +104,12 @@ class PlayerShip: Entity {
     
     func createEngine() {
         let engineEmitter = SKEmitterNode(fileNamed: "engine.sks")
-        engineEmitter.position = CGPoint(x: 1, y: -4)
-        engineEmitter.name = "engineEmitter"
-        addChild(engineEmitter)
+        engineEmitter!.position = CGPoint(x: 1, y: -4)
+        engineEmitter!.name = "engineEmitter"
+        addChild(engineEmitter!)
         
         var mainScene = scene as! GameScene
-        engineEmitter.targetNode = mainScene.particleLayerNode
+        engineEmitter!.targetNode = mainScene.particleLayerNode
     }
     
 }
