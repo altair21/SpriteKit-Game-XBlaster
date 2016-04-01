@@ -76,7 +76,7 @@ class Enemy : Entity {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        [super.init(coder: aDecoder)]
+        super.init(coder: aDecoder)
     }
     
     init(entityPosition: CGPoint, texture: SKTexture, playableRect: CGRect) {
@@ -120,7 +120,7 @@ class Enemy : Entity {
         aiSteering.update(delta)
         
         // Update the health meter for the enemy
-        var healthBarLength = 8.0 * health / 100
+        let healthBarLength = 8.0 * health / 100
         healthMeterLabel.text = "\(healthMeterText.substringToIndex(Int(healthBarLength)))"
         healthMeterLabel.fontColor = SKColor(red: CGFloat(2 * (1 - health / 100)),
             green:CGFloat(2 * health / 100), blue:0, alpha:1)

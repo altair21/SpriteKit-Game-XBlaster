@@ -21,7 +21,7 @@ class Bullet: Entity {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        [super.init(coder: aDecoder)]
+        super.init(coder: aDecoder)
     }
     
     override class func generateTexture() -> SKTexture? {

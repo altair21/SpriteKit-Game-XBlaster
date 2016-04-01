@@ -17,7 +17,7 @@ class Entity: SKSpriteNode {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        [super.init(coder: aDecoder)]
+        super.init(coder: aDecoder)
     }
     
     var direction = CGPointZero

@@ -52,7 +52,7 @@ class AISteering {
         var desiredDirection:CGPoint = waypoint - currentPosition
         
         // Calculate the distance from the entity to the waypoint
-        var distanceToWaypoint:CGFloat = desiredDirection.length()
+        let distanceToWaypoint:CGFloat = desiredDirection.length()
         
         // Update the desired location of the entity based on the maxVelocity that has been
         // defined and the distance to the waypoint
@@ -61,8 +61,8 @@ class AISteering {
         // Calculate the steering force needed to turn towards the waypoint. We turn the entity over
         // time based on the maxSteeringForce to get a natural steering movement rather than snap
         // immediately to point directly towards the waypoint
-        var force:CGPoint = desiredDirection - currentDirection
-        var steeringForce:CGPoint = force * maxSteeringForce / maxVelocity
+        let force:CGPoint = desiredDirection - currentDirection
+        let steeringForce:CGPoint = force * maxSteeringForce / maxVelocity
         
         // Calculate the new direction the entity should move in based on the current direction
         // and the maximum steering force that can be applied. A higher steering force will cause

@@ -333,7 +333,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1.0)
             
         default:
-            print("UNKNWON GAME STATE", appendNewline: false)
+            print("UNKNOWN GAME STATE")
         }
         
     }
